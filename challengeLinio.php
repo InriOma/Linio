@@ -78,8 +78,6 @@ class ChallengeLinio {
 
 $challenge = new ChallengeLinio;
 $listado = $challenge->generaNumeros();
-//$mul3 = $challenge->generaMultiplo3($listado);
-
 $challenge->imprime($listado);
 
 
