@@ -4,9 +4,6 @@ class ChallengeLinio {
 
   public $hasta  = 100;
   private $lista = array();
-  //private $listaFinal = array();
-  private $multiplo3 = 3;
-  private $multiplo5 = 5;
 
   public function __contruct($hasta) {
 
@@ -36,32 +33,6 @@ class ChallengeLinio {
       }
 
     }
-
-    return $lista;
-
-  }
-
-  public function generaMultiplo3($lista) {
-
-    $i = 0;
-    while($i < count($lista)) {
-      while (($lista[$i] % $this->multiplo3) == 0) {
-        $lista[$i] = "Linio";
-      }
-      $i++;
-    }
-
-    return $lista;
-
-  }
-
-  public function generaMultiplo5($lista) {
-
-    return $lista;
-
-  }
-
-  public function generaMultiplo35($lista) {
 
     return $lista;
 
