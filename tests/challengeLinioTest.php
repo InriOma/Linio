@@ -1,9 +1,9 @@
 <?php
 
-require __DIR__ . "/../Controllers/ChallengeLinio.php";
+require __DIR__ . "/../src/ChallengeLinio.php";
 
 use PHPUnit\Framework\TestCase;
-use App\Controllers\ChallengeLinio;
+use App\src\ChallengeLinio;
 
 class ChallengeLinioTest extends TestCase
 {
