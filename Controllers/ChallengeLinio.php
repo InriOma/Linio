@@ -1,11 +1,14 @@
 <?php
 
-class ChallengeLinio {
+namespace App\Controllers;
 
-  public $hasta  = 100;
+class ChallengeLinio
+{
+
+  private $hasta;
   private $lista = array();
 
-  public function __contruct($hasta) {
+  public function __construct($hasta) {
 
     $this->hasta = $hasta;
 
@@ -17,24 +20,24 @@ class ChallengeLinio {
 
       switch($i) {
         case ($i % 3) == 0:
-          $lista[] = $i . ": - Linio";
+          $this->lista[] = $i . ": - Linio";
           break;
         case ($i % 5) == 0:
-          $lista[] = $i . ": - IT";
+          $this->lista[] = $i . ": - IT";
           break;
         default:
-          $lista[] = $i;
+          $this->lista[] = $i;
       }
 
       switch($i) {
         case (($i % 3) == 0) && (($i % 5) == 0):
-          $lista[] = $i . ": - Linianos";
+          $this->lista[] = $i . ": - Linianos";
           break;
       }
 
     }
 
-    return $lista;
+    return $this->lista;
 
   }
 
@@ -47,7 +50,7 @@ class ChallengeLinio {
 
 }
 
-$challenge = new ChallengeLinio;
+$challenge = new ChallengeLinio(100);
 $listado = $challenge->generaNumeros();
 $challenge->imprime($listado);
 
