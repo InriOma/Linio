@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . "/../controllers/ChallengeLinio.php";
+require __DIR__ . "/../Controllers/ChallengeLinio.php";
 
 use PHPUnit\Framework\TestCase;
 use App\Controllers\ChallengeLinio;
