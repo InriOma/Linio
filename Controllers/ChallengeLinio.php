@@ -20,19 +20,23 @@ class ChallengeLinio
 
       switch($i) {
         case ($i % 3) == 0:
-          $this->lista[] = $i . ": - Linio";
+          $this->lista[] .= $i . ": - Linio";
           break;
         case ($i % 5) == 0:
-          $this->lista[] = $i . ": - IT";
+          $this->lista[] .= $i . ": - IT";
+          break;
+        case (($i % 3) == 0) && (($i % 5) == 0):
+          $this->lista[] .= $i . " - Linianos";
           break;
         default:
-          $this->lista[] = $i;
+          $this->lista[] = $i .":";
       }
 
       switch($i) {
         case (($i % 3) == 0) && (($i % 5) == 0):
-          $this->lista[] = $i . ": - Linianos";
+          $this->lista[] .= $i . ": - Linianos";
           break;
+
       }
 
     }
@@ -44,7 +48,7 @@ class ChallengeLinio
   public function imprime($lista) {
 
     foreach($lista as $num) {
-      print "Numero: " . $num ."\n";
+      print "Numero: " . $num . "\n";
     }
   }
 
